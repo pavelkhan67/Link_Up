@@ -1,14 +1,47 @@
-import React, { useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
+import { addToDb, getShoppingCart } from '../utilities/fakedb';
+export const MoneyContext = createContext(0);
 
 const JobDetails = () => {
+
+    const [cart, setCart] = useState([])
+
     let {id} = useParams();
     const job = useLoaderData();
     const [jobDetails, setJobDetails] = useState([]);
-    const {logo, title, name, type, location, time, salary, description, responsibility, education, experiences, contact } = jobDetails;
+    const {title, salary, description, responsibility, education, experiences, contact } = jobDetails;
+
     useEffect(()=> {
         setJobDetails(job?.find(jd => jd.id === parseInt(id)));
     },[])
+
+    useEffect(() => {
+        const storedCart = getShoppingCart();
+        const savedCart = [];
+        // step1: get the id
+        for (const id in storedCart) {
+            // step2: get the product by using id
+            const addedProduct = job.find(product => product.id === id)
+            if (addedProduct) {
+                // step3: get quantity of the product
+                const quantity = storedCart[id]
+                addedProduct.quantity = quantity
+                // step4: add the addedProduct to the savedCart
+                savedCart.push(addedProduct)
+            }
+        }
+        // step5: set the cart
+        setCart(savedCart)
+    }, [job])
+
+    console.log(cart);
+
+    const handleAddToCart = (product) => {
+        let newCart = [...cart, product];
+        setCart(newCart)
+        addToDb(product.id)
+    }
 
     return (
         <div className='my-container'>
@@ -31,7 +64,7 @@ const JobDetails = () => {
                         <p className=' flex gap-2'> <img src="/public/frame2.png" alt="" /> Phone: {contact?.phone}</p>
                         <p className=' flex gap-2 pt-2'> <img src="/public/frame3.png" alt="" /> Email: {contact?.email}</p>
                     </div>
-                    <Link><button className='btn btn-secondary w-full '>Apply Now</button></Link>
+                   <button onClick={()=> handleAddToCart(jobDetails)} className='btn btn-secondary w-full '>Apply Now</button>
                 </div>
             </div>
         </div>

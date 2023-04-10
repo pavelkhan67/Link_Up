@@ -7,6 +7,9 @@ import App from './App';
 import Home from './components/Home';
 import JobDetails from './components/JobDetails';
 import LoadingSpinner from './components/LoadingSpinner';
+import AppliedJobs from './components/AppliedJobs';
+import Statistics from './components/Statistics';
+import Blogs from './components/Blogs';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +26,18 @@ const router = createBrowserRouter([
         path: '/job/:id',
         element: <JobDetails></JobDetails>,
         loader: () => fetch('jobsData.json')
+      },
+      {
+        path: '/appliedJobs',
+        element: <AppliedJobs></AppliedJobs>
+      },
+      {
+        path: '/statistics',
+        element: <Statistics></Statistics>
+      },
+      {
+        path: '/blogs',
+        element: <Blogs></Blogs>
       },
       {
         path: 'loader',

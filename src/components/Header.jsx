@@ -29,7 +29,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to='/countries'
+              to='/statistics'
               className={({ isActive }) => (isActive ? 'active' : 'default')}
             >
               Statistics
@@ -37,7 +37,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to='/about'
+              to='/appliedJobs'
               className={({ isActive }) => (isActive ? 'active' : 'default')}
             >
               Applied Jobs
@@ -45,7 +45,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to='/about'
+              to='/blogs'
               className={({ isActive }) => (isActive ? 'active' : 'default')}
             >
               Blog
