@@ -25,8 +25,8 @@ const AppliedJobs = () => {
         <div className='my-container'>
             <h2 className='text-2xl font-semibold'>Applied Jobs</h2>
             <div className=' my-5 flex justify-end gap-5'>
-                <button className='btn btn-secondary'>a</button>
-                <button className='btn btn-secondary'>a</button>
+                <button className='btn btn-secondary'>Remote Job</button>
+                <button className='btn btn-secondary'>On-Site Job</button>
             </div>
             <div className='flex flex-col gap-5'>
             {

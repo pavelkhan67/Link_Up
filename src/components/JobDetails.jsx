@@ -41,7 +41,7 @@ const JobDetails = () => {
     return (
         <div className='my-container'>
             <h2 className='text-2xl font-semibold'>Job Details</h2>
-            <div className='grid grid-cols-6 mt-10 text-left '>
+            <div className='lg:grid grid-cols-6 mt-10 text-left '>
                 <div className='grid col-span-4 p-5 gap-3'>
                     <p><span className='font-semibold text-lg'>Job Description:</span> {description}</p>
                     <p><span className='font-semibold text-lg'>Job Responsibility:</span> {responsibility}</p>

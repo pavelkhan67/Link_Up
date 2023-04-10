@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SingleAppliedJobs = ({ singleJob }) => {
-    const { logo, title, name, type, location, time, salary, description, responsibility, education, experiences, contact } = singleJob;
+    const { logo, title, name, type, location, time, salary, id} = singleJob;
     return (
         <div className='grid grid-cols-4 border border-gray-400 rounded-md'>
             <div className='grid col-span-1 bg-violet-50 mx-5 my-3 rounded-md'>
                 <img className='h-36 w-40 mx-auto' src={logo} alt="" />
             </div>
-            <div className='grid col-span-3 flex flex-col text-left p-5'>
+            <div className='grid col-span-3 text-left p-5'>
                 <div className='flex justify-between items-center'>
                     <div>
                         <p className='text-lg font-semibold'>{title}</p>
@@ -21,7 +22,7 @@ const SingleAppliedJobs = ({ singleJob }) => {
                             <p className=' flex gap-2 pt-2'><img src="/public/money.png" alt="" />Salary: {salary}</p>
                         </div>
                     </div>
-                    <button className='btn btn-secondary'>View Details</button>
+                    <Link to={`/job/${id}`}><button className='btn btn-secondary text-white'>View Details</button></Link>
                 </div>
             </div>
         </div>
