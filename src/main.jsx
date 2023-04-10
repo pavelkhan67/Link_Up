@@ -5,7 +5,6 @@ import './index.css'
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
 import App from './App';
 import Home from './components/Home';
-import JobCategory from './components/JobCategory';
 
 const router = createBrowserRouter([
   {
