@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import JobCategory from './JobCategory';
 import { useLoaderData } from 'react-router-dom';
 import FeaturedJobs from './FeaturedJobs';
+import JobDetails from './JobDetails';
 
 const Home = () => {
     const categories = useLoaderData()
@@ -38,7 +39,7 @@ const Home = () => {
                 <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 <div className='grid lg:grid-cols-4 gap-5 mt-8'>
                     {
-                        categories.map(category => <JobCategory key={category.id} category={category}></JobCategory>)
+                        categories?.map(category => <JobCategory key={category.id} category={category}></JobCategory>)
                     }
                 </div>
             </div>
