@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .my-container{
-    @apply w-11/12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-16 lg:px-8 lg:pt-5 lg:pb-10
+    @apply w-11/12 mx-auto sm:max-w-xl pt-10 md:max-w-full lg:max-w-screen-xl md:px-16 lg:px-8 lg:pb-10
   }
   
   .badge{

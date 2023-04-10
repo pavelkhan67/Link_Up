@@ -8,10 +8,10 @@ import {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
-    <div className='bg-violet-50 px-5 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-20'>
+    <div className='bg-violet-50 px-5 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-20'>
       <div className='relative flex items-center justify-between'>
         <Link to='/' className='inline-flex items-center'>
-          <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
+          <span className='ml-2 text-2xl font-bold tracking-wide text-gray-800'>
             LinkUp
           </span>
         </Link>
