@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import JobCategory from './JobCategory';
 import { useLoaderData } from 'react-router-dom';
 import FeaturedJobs from './FeaturedJobs';
-import JobDetails from './JobDetails';
 
 const Home = () => {
     const categories = useLoaderData()
