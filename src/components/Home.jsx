@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import JobCategory from './JobCategory';
-import { useLoaderData } from 'react-router-dom';
 import FeaturedJobs from './FeaturedJobs';
 
 const Home = () => {
-    
-    const categories = useLoaderData()
+    // fetch category data
+    const [categories, setCategories] = useState([])
+    useEffect(() => {
+        const loadData = async () => {
+            const res = await fetch('categoryData.json');
+            const value = await res.json();
+            setCategories(value);
+        };
+        loadData();
+    }, []);
 
     const [showAll, setShowAll] = useState(false);
 
@@ -13,6 +20,7 @@ const Home = () => {
         setShowAll(true);
     };
 
+    // fetch jobs data
     const [jobs, setJobs] = useState([])
     useEffect(() => {
         const loadData = async () => {

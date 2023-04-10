@@ -19,19 +19,14 @@ const JobDetails = () => {
     useEffect(() => {
         const storedCart = getShoppingCart();
         const savedCart = [];
-        // step1: get the id
         for (const id in storedCart) {
-            // step2: get the product by using id
-            const addedProduct = job.find(product => product.id === id)
+            const addedProduct = job?.find(product => product.id == id)
             if (addedProduct) {
-                // step3: get quantity of the product
                 const quantity = storedCart[id]
                 addedProduct.quantity = quantity
-                // step4: add the addedProduct to the savedCart
                 savedCart.push(addedProduct)
             }
         }
-        // step5: set the cart
         setCart(savedCart)
     }, [job])
 
