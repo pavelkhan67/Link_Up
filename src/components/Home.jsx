@@ -53,7 +53,7 @@ const Home = () => {
                 </div>
                 {!showAll && (
                     <span onClick={handleShowAll}>
-                        <button className='btn btn-secondary'>See All Jobs</button>
+                        <button className='btn btn-secondary mb-5 lg:mb-0'>See All Jobs</button>
                     </span>
                 )}
             </div>
