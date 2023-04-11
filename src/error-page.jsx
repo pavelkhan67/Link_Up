@@ -11,7 +11,7 @@ export default function ErrorPage() {
       <p className="py-2">{error.status} <i>{error.statusText}</i></p>
       <p className="pb-2">Sorry, an unexpected error has occurred.</p>
       <p>
-        <i>{error.statusText || error.message}</i>
+        <i>{error.statusText || error.message }</i>
       </p>
     </div>
   );

@@ -13,14 +13,14 @@ const JobDetails = () => {
     const {title, salary, description, responsibility, education, experiences, contact } = jobDetails;
 
     useEffect(()=> {
-        setJobDetails(job?.find(jd => jd.id === parseInt(id)));
+        setJobDetails( job && job.find(jd => jd.id === parseInt(id)));
     },[])
 
     useEffect(() => {
         const storedCart = getShoppingCart();
         const savedCart = [];
         for (const id in storedCart) {
-            const addedProduct = job?.find(product => product.id == id)
+            const addedProduct = job &&  job.find(product => product.id == id)
             if (addedProduct) {
                 const quantity = storedCart[id]
                 addedProduct.quantity = quantity
@@ -29,8 +29,6 @@ const JobDetails = () => {
         }
         setCart(savedCart)
     }, [job])
-
-    console.log(cart);
 
     const handleAddToCart = (product) => {
         let newCart = [...cart, product];

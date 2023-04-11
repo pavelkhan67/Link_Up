@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import JobDetails from './JobDetails';
 
 const FeaturedJobs = ({ job }) => {
     const { id, logo, title, name, type, location, time, salary} = job;
     return (
         <div className='border-2 border-slate-200 p-5 text-left rounded-md relative'>
-            <img className='w-28 h-12' src={logo} alt="" />
+            <img className='w-32 h-12' src={logo} alt="" />
             <h2 className='text-xl font-semibold pt-5 pb-2'>{title}</h2>
             <p className='text-info'>{name}</p>
             <div className='flex gap-2 py-2'>
