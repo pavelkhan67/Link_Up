@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import {
   Bars3BottomRightIcon,
-  XMarkIcon, FlagIcon
+  XMarkIcon
 } from '@heroicons/react/24/solid'
 
 const Header = () => {
@@ -11,6 +11,7 @@ const Header = () => {
     <div className='bg-violet-50 px-5 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-20'>
       <div className='relative flex items-center justify-between'>
         <Link to='/' className='inline-flex items-center'>
+          <img className='w-7 h-8' src="/public/business.svg" alt="" />
           <span className='ml-2 text-2xl font-bold tracking-wide text-gray-800'>
             LinkUp
           </span>
@@ -52,8 +53,8 @@ const Header = () => {
             </NavLink>
           </li>
         </ul>
-        <Link><button className='btn btn-secondary text-white'>Star Applying</button></Link>
         </div>
+        <div className='hidden lg:block'><Link><button className="font-semibold bg-gradient-to-r from-blue-400 to-purple-400 p-3 rounded-md text-white">Star Applying</button></Link></div>
         
         {/* Mobile Navbar Section */}
         <div className='lg:hidden'>
@@ -120,7 +121,7 @@ const Header = () => {
                         Blogs
                       </Link>
                     </li>
-                    <Link><button className='btn btn-secondary text-white mt-5'>Star Applying</button></Link>
+                    <Link><button className="font-semibold bg-gradient-to-r from-blue-400 to-purple-400 p-2 rounded-md text-white mt-5" >Star Applying</button></Link>
                   </ul>
                 </nav>
               </div>

@@ -17,7 +17,7 @@ const FeaturedJobs = ({ job }) => {
                 <p className=' flex gap-2 pt-2 pb-5'><img src="/public/money.png" alt="" />Salary: {salary}</p>
             </div>
             <div className=' absolute bottom-5'>
-                <Link to={`/job/${id}`}><button className='btn btn-secondary text-white'>View Details</button></Link>
+                <Link to={`/job/${id}`}><button className="font-semibold bg-gradient-to-r from-blue-400 to-purple-400 p-2 rounded-md text-white">View Details</button></Link>
             </div>
         </div>
     );

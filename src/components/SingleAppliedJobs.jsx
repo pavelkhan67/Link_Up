@@ -22,7 +22,7 @@ const SingleAppliedJobs = ({ singleJob }) => {
                             <p className=' flex gap-2 pt-2'><img src="/public/money.png" alt="" />Salary: {salary}</p>
                         </div>
                     </div>
-                    <Link to={`/job/${id}`}><button className='btn btn-secondary text-white'>View Details</button></Link>
+                    <Link to={`/job/${id}`}><button className="font-semibold bg-gradient-to-r from-blue-400 to-purple-400 p-2 rounded-md text-white">View Details</button></Link>
                 </div>
             </div>
         </div>
