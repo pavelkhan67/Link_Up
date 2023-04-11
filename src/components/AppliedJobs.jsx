@@ -52,8 +52,8 @@ const AppliedJobs = () => {
         <>
             <div className='bg-indigo-50 relative'>
                 <div className='flex justify-between'>
-                    <img className='h-40' src="/public/Vector.png" alt="" />
-                    <img className='h-40' src="/public/Vector1.png" alt="" />
+                    <img className='h-40' src="/vector.png" alt="" />
+                    <img className='h-40' src="/vector1.png" alt="" />
                 </div>
                 <h2 className='text-2xl font-semibold absolute text-center left-[35%] top-[40%] lg:left-[43%]'>Applied Jobs</h2>
             </div>

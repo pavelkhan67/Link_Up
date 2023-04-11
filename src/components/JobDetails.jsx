@@ -40,8 +40,8 @@ const JobDetails = () => {
         <div className=''>
             <div className='bg-indigo-50 relative'>
                 <div className='flex justify-between'>
-                    <img className='h-40' src="/public/Vector.png" alt="" />
-                    <img className='h-40' src="/public/Vector1.png" alt="" />
+                    <img className='h-40' src="/vector.png" alt="" />
+                    <img className='h-40' src="/vector1.png" alt="" />
                 </div>
             <h2 className='text-2xl font-semibold absolute text-center top-[40%] left-[35%] lg:left-[43%]'>Job Details</h2>
             </div>
@@ -56,13 +56,13 @@ const JobDetails = () => {
                     <div className='p-5 bg-violet-50 mb-5 rounded-md'>
                         <h2 className='font-semibold'>Job Details</h2>
                         <hr className='border-y-2 border-slate-200 my-3' />
-                        <p className=' flex gap-2'> <img src="/public/money.png" alt="" /> <span className='font-semibold' >Salary:</span> {salary}</p>
-                        <p className=' flex gap-2 pt-2 mb-6'> <img src="/public/frame1.png" alt="" /> <span className='font-semibold' >Job Title:</span> {title}</p>
+                        <p className=' flex gap-2'> <img src="/money.png" alt="" /> <span className='font-semibold' >Salary:</span> {salary}</p>
+                        <p className=' flex gap-2 pt-2 mb-6'> <img src="/frame1.png" alt="" /> <span className='font-semibold' >Job Title:</span> {title}</p>
                         <h2 className='font-semibold'>Contact Information</h2>
                         <hr className='border-y-2 border-slate-200 my-3' />
-                        <p className=' flex gap-2'> <img src="/public/frame2.png" alt="" /> <span className='font-semibold' >Phone:</span> {contact?.phone}</p>
-                        <p className=' flex gap-2 pt-2'> <img src="/public/frame3.png" alt="" /> <span className='font-semibold' >Email:</span>{contact?.email}</p>
-                        <p className=' flex gap-2 pt-2'> <img src="/public/location.png" alt="" /> <span className='font-semibold' >Address:</span>{location}</p>
+                        <p className=' flex gap-2'> <img src="/frame2.png" alt="" /> <span className='font-semibold' >Phone:</span> {contact?.phone}</p>
+                        <p className=' flex gap-2 pt-2'> <img src="/frame3.png" alt="" /> <span className='font-semibold' >Email:</span>{contact?.email}</p>
+                        <p className=' flex gap-2 pt-2'> <img src="/location.png" alt="" /> <span className='font-semibold' >Address:</span>{location}</p>
                     </div>
                    <button onClick={()=> handleAddToCart(jobDetails)} className="font-semibold bg-gradient-to-r from-blue-400 to-purple-400 p-2 rounded-md text-white w-full mb-5">Apply Now</button>
                 </div>

@@ -11,7 +11,7 @@ const Header = () => {
     <div className='bg-violet-50 px-5 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-20'>
       <div className='relative flex items-center justify-between'>
         <Link to='/' className='inline-flex items-center'>
-          <img className='w-7 h-8' src="/public/business.svg" alt="" />
+          <img className='w-7 h-8' src="/logo.svg" alt="" />
           <span className='ml-2 text-2xl font-bold tracking-wide text-gray-800'>
             LinkUp
           </span>
