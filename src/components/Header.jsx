@@ -98,21 +98,29 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to='/countries'
+                        to='/statistics'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
                       >
-                        Countries
+                        Statistics
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to='/about'
+                        to='/appliedJobs'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
                       >
-                        About Us
+                        Applied Jobs
                       </Link>
                     </li>
-                    <Link><button className='btn btn-secondary text-white'>Star Applying</button></Link>
+                    <li>
+                      <Link
+                        to='/blogs'
+                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
+                      >
+                        Blogs
+                      </Link>
+                    </li>
+                    <Link><button className='btn btn-secondary text-white mt-5'>Star Applying</button></Link>
                   </ul>
                 </nav>
               </div>

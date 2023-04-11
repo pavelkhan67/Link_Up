@@ -7,13 +7,14 @@ const Home = () => {
     const [categories, setCategories] = useState([])
     useEffect(() => {
         const loadData = async () => {
-            const res = await fetch('categoryData.json');
+            const res = await fetch('/categoryData.json');
             const value = await res.json();
             setCategories(value);
         };
         loadData();
     }, []);
 
+    // Show all data btn
     const [showAll, setShowAll] = useState(false);
 
     const handleShowAll = () => {
@@ -24,7 +25,7 @@ const Home = () => {
     const [jobs, setJobs] = useState([])
     useEffect(() => {
         const loadData = async () => {
-            const res = await fetch('jobsData.json');
+            const res = await fetch('/jobsData.json');
             const value = await res.json();
             setJobs(value);
         };

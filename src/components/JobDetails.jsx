@@ -57,7 +57,7 @@ const JobDetails = () => {
                         <p className=' flex gap-2'> <img src="/public/frame2.png" alt="" /> Phone: {contact?.phone}</p>
                         <p className=' flex gap-2 pt-2'> <img src="/public/frame3.png" alt="" /> Email: {contact?.email}</p>
                     </div>
-                   <button onClick={()=> handleAddToCart(jobDetails)} className='btn btn-secondary w-full '>Apply Now</button>
+                   <button onClick={()=> handleAddToCart(jobDetails)} className='btn btn-secondary text-white w-full mb-5'>Apply Now</button>
                 </div>
             </div>
         </div>

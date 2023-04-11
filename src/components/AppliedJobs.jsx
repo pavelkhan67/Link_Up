@@ -1,25 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { getShoppingCart } from '../utilities/fakedb';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData} from 'react-router-dom';
 import SingleAppliedJobs from './SingleAppliedJobs';
 
 const AppliedJobs = () => {
     const [cart, setCart] = useState([])
     const job = useLoaderData();
-    
-    // Remote Job Search 
-    const [rem, setRem] = useState([]);
-    useEffect(() => {
-        const a = [];
-            const b = cart.filter(product =>product.type == 'Remote')
-            a.push(b)
-        setRem(a)
-    }, [job])
 
-    const handleRemote =() => {
-        setCart(rem[0])
-    }
-
+    // Get all applied job from localStorage
     useEffect(() => {
         const storedCart = getShoppingCart();
         const savedCart = [];
@@ -33,14 +21,41 @@ const AppliedJobs = () => {
         }
         setCart(savedCart)
     }, [job])
+
+    // Remote Job Search 
+    const [remote, setRemote] = useState(cart);
+    useEffect(() => {
+        const initial = [];
+            const find = cart.filter(product =>product.type == 'Remote')
+            initial.push(find)
+        setRemote(initial)
+    }, [cart])
+
+    const handleRemote =() => {
+        setCart(remote[0])
+    }
+
+    // Onsite Job Search 
+    const [onsite, setOnsite] = useState(cart);
+    useEffect(() => {
+        const initial = [];
+            const find = cart.filter(product =>product.type == 'Onsite')
+            initial.push(find)
+        setOnsite(initial)
+    }, [cart])
+
+    const handleOnsite =() => {
+        setCart(onsite[0])
+    }
  
     return (
         <div className='my-container'>
             <h2 className='text-2xl font-semibold'>Applied Jobs</h2>
-            <div className=' my-5 flex justify-end gap-5'>
-                <button onClick={()=> handleRemote()} className='btn btn-secondary'>Remote Job</button>
-                <button className='btn btn-secondary'>On-Site Job</button>
+            <div className=' mt-5 flex justify-end gap-5'>
+                <button title="Click Applied Jobs Route First!" onClick={()=> handleRemote()} className='btn btn-secondary text-white'>Remote Job</button>
+                <button title="Click Applied Jobs Route First!" onClick={()=> handleOnsite()} className='btn btn-secondary text-white'>On-Site Job</button>
             </div>
+            <p className='text-xs text-end mb-5 text-error mt-1'>Click Applied Jobs Route First Or refresh <br /> the page Otherwise Filter doesn't work!!</p>
             <div className='flex flex-col gap-5'>
             {
                 cart.map(singleJob => <SingleAppliedJobs key={singleJob.id} singleJob ={singleJob}></SingleAppliedJobs>)
