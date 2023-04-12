@@ -6,10 +6,11 @@ const addToDb = id => {
     // add quantity
     const quantity = shoppingCart[id];
     if (!quantity) {
+        toast.success("Successfully Added.", {autoClose: 1000})
         shoppingCart[id] = 1;
     }
     else {
-        toast("You Can't Apply The Same Job Multiple Time!!!")
+        toast.error("You Can't Apply The Same Job Multiple Time!!! " , {autoClose: 2000})
     }
     localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
 }

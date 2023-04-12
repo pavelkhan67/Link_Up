@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SingleAppliedJobs = ({ singleJob }) => {
     const { logo, title, name, type, location, time, salary, id} = singleJob;
     return (
-        <div className='grid grid-cols-4 border border-gray-400 rounded-md'>
+        <div className='lg:grid grid-cols-4 border-2 border-slate-200 rounded-md'>
             <div className='grid col-span-1 bg-violet-50 mx-5 my-3 rounded-md'>
                 <img className='h-36 w-40 mx-auto' src={logo} alt="" />
             </div>

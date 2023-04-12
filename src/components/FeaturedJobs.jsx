@@ -12,9 +12,9 @@ const FeaturedJobs = ({ job }) => {
                 <p className='border border-secondary px-2 rounded-md text-secondary'>{type}</p>
                 <p className='border border-secondary px-2 rounded-md text-secondary'>{time}</p>
             </div>
-            <div className='lg:flex gap-5 text-sm mb-12'>
-                <p className=' flex gap-2 pt-2 lg:pb-5'><img src="/location.png" alt="" />{location}</p>
-                <p className=' flex gap-2 pt-2 pb-5'><img src="/money.png" alt="" />Salary: {salary}</p>
+            <div className='lg:flex gap-5 text-sm mb-10'>
+                <p className='text-info flex gap-2 pt-2 lg:pb-5'><img src="/location.png" alt="" />{location}</p>
+                <p className='text-info flex gap-2 pt-2 pb-5'><img src="/money.png" alt="" />Salary: {salary}</p>
             </div>
             <div className=' absolute bottom-5'>
                 <Link to={`/job/${id}`}><button className="font-semibold bg-gradient-to-r from-blue-400 to-purple-400 p-2 rounded-md text-white">View Details</button></Link>
